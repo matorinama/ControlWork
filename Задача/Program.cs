@@ -12,13 +12,16 @@
 
 
 Console.Clear();
-
+//1
 Console.WriteLine("Введите первоначальный массив через пробел (можно использовать любые слова, символы, эмодзи, цифры):");
-string [] st = Console.ReadLine().Split(); 
+string [] st = Console.ReadLine().Split();
+
+//4
+Console.WriteLine("Критериям соответствуют:");
 PrintStringArray(SymbolLimit3(st));
 
 
-
+//2
 string[] SymbolLimit3 (string[] array)
 {
     int size = 0; // для определения какого размера понадобится новый массив с результатом
@@ -39,7 +42,7 @@ string[] SymbolLimit3 (string[] array)
     return result;
 }
 
-
+//3
 void PrintStringArray(string[] array)
 {
     int count = array.Length;
