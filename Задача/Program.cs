@@ -11,4 +11,43 @@
 
 
 
+Console.Clear();
+
+Console.WriteLine("Введите первоначальный массив через пробел (можно использовать любые слова, символы, эмодзи, цифры):");
+string [] st = Console.ReadLine().Split(); 
+PrintStringArray(SymbolLimit3(st));
+
+
+
+string[] SymbolLimit3 (string[] array)
+{
+    int size = 0; // для определения какого размера понадобится новый массив с результатом
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) size++;
+    }
+    string[] result = new string [size];
+    int k = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if (array[j].Length <= 3) 
+        {
+            result[k] = array[j];
+            k++;
+        }
+    }
+    return result;
+}
+
+
+void PrintStringArray(string[] array)
+{
+    int count = array.Length;
+    int position = 0;
+    while (position < count)
+    {
+        Console.WriteLine(array[position]);
+        position++;
+    }
+}
 
